@@ -1,0 +1,32 @@
+# Artefactos de compilación de Cargo (no necesarios para ejecutar el programa)
+/target
+
+# Restos de editores y sistema operativo
+*.swp
+*~
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Estado de la interfaz (tamaño/posición de la ventana): se genera al ejecutar
+# y no es necesario para el funcionamiento.
+radio_ui.ron
+
+# --- Artefactos generados: NO se versionan ---------------------------------
+# El ejecutable y el PDF pesan decenas de MB y cambian en cada compilación.
+# Versionarlos haría crecer el repositorio sin límite (22 MB por versión).
+# Se generan con ./prepara_release.sh y se distribuyen dentro del .zip del
+# release, que no forma parte del historial de git. Los ficheros pequeños de
+# configuración de distribucion/bin/ (emisoras.m3u, noticias.m3u,
+# minutos_noticias.txt, ultima_estacion.txt) SÍ siguen versionados.
+/distribucion/bin/radio-gui-rust
+/distribucion/bin/README.pdf
+
+# Logs y notas locales: se generan al usar el programa y no forman parte del
+# proyecto (efectos.txt con `2> efectos.txt`, seguir.txt con notas sueltas).
+efectos.txt
+seguir.txt
+
+# Paquetes de release generados (zip + suma de verificación)
+/dist/
+*.zip

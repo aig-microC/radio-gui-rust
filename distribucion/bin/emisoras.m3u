@@ -1,0 +1,18 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXTINF:-1,RNE - R1 --> Madrid .m3u8
+https://rtvelivestream.rtve.es/rtvesec/rne/rne_r1_main.m3u8
+#EXTINF:-1,RNE - R5 --> Madrid
+https://dispatcher.rndfnk.com/crtve/rne5/mad/mp3/high
+#EXTINF:-1,BBC World Service
+http://stream.live.vc.bbcmedia.co.uk/bbc_world_service
+#EXTINF:-1,NPR 24 Hour Program Stream
+http://npr-ice.streamguys1.com/live.mp3
+#EXTINF:-1,RFI Monde
+http://live02.rfi.fr/rfimonde-96k.mp3
+#EXTINF:-1,France Info
+http://icecast.radiofrance.fr/franceinfo-midfi.mp3
+#EXTINF:-1,Classical Jazz Radio
+https://ec1.yesstreaming.net:2905/stream
+#EXTINF:-1,Public Domain Jazz
+http://relay.publicdomainradio.org:80/jazz_swing.aac

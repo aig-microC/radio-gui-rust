@@ -1,0 +1,22 @@
+[package]
+name = "radio-gui-rust"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+eframe = { version = "0.33.3", features = ["persistence"] }
+chrono = "0.4"
+rodio = "0.19"
+symphonia = { version = "0.5", features = ["aac", "mp3"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+
+# Perfil de distribución: binario más pequeño y sin símbolos de depuración.
+# Nota: no se usa `panic = "abort"` a propósito. La aplicación reproduce audio
+# en hilos de trabajo (red/decodificación) y con `abort` cualquier pánico
+# imprevisto los llevaría a terminar todo el proceso. Con el desenrollado
+# normal, un pánico se captura y se muestra como error sin cerrar la interfaz.
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
